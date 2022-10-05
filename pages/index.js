@@ -12,7 +12,7 @@ export async function getServerSideProps(context) {
   const ip = typeof forwarded === 'string' ? forwarded.split(/, /)[0] : req.socket.remoteAddress;
   console.log(ip);
 
-  const data = { test: 'test text', ip: ip }
+  const data = { test: 'test', ip: ip }
   // Pass data to the page via props
   return { props: { data } }
 }
